@@ -1,0 +1,78 @@
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Crea dos columnas de igual ancho */
+  gap: 20px;
+  max-width: 900px; /* Limita el ancho del contenedor principal */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
+}
+
+.results-container h3,
+.results-container p {
+  margin: 5px 0;
+}
+
+.image-wrapper {
+  background-color: #4a90e2; /* El círculo azul */
+  border-radius: 50%; /* Hace que el contenedor sea circular */
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.image-wrapper img {
+  max-width: 100px;
+  height: auto;
+  filter: brightness(0) invert(1); /* Pone la imagen en color blanco */
+}
+
+.fecha-container {
+  display: grid;
+  /* Dos columnas de igual ancho para Día y Mes, y una fila para el Año */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1px; /* Espacio mínimo entre los campos */
+  border: 1px solid #ccc; /* Borde exterior */
+  width: fit-content; /* El contenedor se ajusta al ancho de los campos */
+}
+
+/* Estilos para los inputs dentro del contenedor */
+.fecha-container input {
+  border: none; /* Elimina los bordes de los inputs */
+  padding: 8px; /* Espaciado interno */
+  text-align: center;
+}
+
+/* Aplica un borde vertical para separar Día y Mes */
+.fecha-container input[formControlName="mes"] {
+  border-left: 1px solid #ccc;
+}
+
+/* El input del año debe ocupar las dos columnas */
+.fecha-container input[formControlName="ano"] {
+  grid-column: 1 / span 2; /* Comienza en la columna 1 y se extiende por 2 */
+  border-top: 1px solid #ccc; /* Borde superior para separarlo de los otros campos */
+}
+
+.emoji-zodiaco {
+  font-size: 5rem; /* Un tamaño de letra grande para el emoji */
+  display: block; /* Para que ocupe todo el ancho y se centre */
+  text-align: center;
+}

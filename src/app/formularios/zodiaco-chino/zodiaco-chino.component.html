@@ -1,0 +1,33 @@
+<div class="main-container">
+  <form [formGroup]="zodiacoForm" (ngSubmit)="ConsultarZodiaco()">
+    <h3>Datos Personales</h3>
+    <label>Nombre:</label>
+    <input type="text" formControlName="nombre" /><br />
+
+    <label>Apellido Paterno:</label>
+    <input type="text" formControlName="apaterno" /><br />
+
+    <label>Apellido Materno:</label>
+    <input type="text" formControlName="amaterno" /><br />
+
+    <h4>Fecha de nacimiento</h4>
+    <div class="fecha-container">
+      <input type="number" formControlName="dia" placeholder="Día" />
+      <input type="number" formControlName="mes" placeholder="Mes" />
+      <input type="number" formControlName="ano" placeholder="Año" />
+    </div>
+
+    <h4>Sexo</h4>
+    <label><input type="radio" value="Masculino" formControlName="sexo" /> Masculino</label>
+    <label><input type="radio" value="Femenino" formControlName="sexo" /> Femenino</label><br />
+
+    <button type="submit">Imprimir</button>
+  </form>
+
+  <div class="results-container">
+    <h3>Hola {{ resultados.NombreCompleto }}</h3>
+    <p>Tienes {{ resultados.Edad }} años</p>
+    <p>Tu signo zodiacal chino es <strong>{{ resultados.Signo }}</strong></p>
+    <span class="emoji-zodiaco">{{ resultados.Img }}</span>
+  </div>
+</div>

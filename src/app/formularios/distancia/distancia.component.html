@@ -1,0 +1,20 @@
+
+<form [formGroup]="distancia">
+  <label>X1:</label>
+  <input type="number" formControlName="x1"><br>
+
+  <label>Y1:</label>
+  <input type="number" formControlName="y1"><br>
+
+  <label>X2:</label>
+  <input type="number" formControlName="x2"><br>
+
+  <label>Y2:</label>
+  <input type="number" formControlName="y2"><br>
+
+  <button (click)="calcularDistancia()" type="submit">CALCULAR</button>
+</form>
+
+<div>
+  La distancia entre los dos puntos es: {{ resultado }}
+</div>
