@@ -6,15 +6,15 @@ import { AxBComponent } from './formularios/ax-b/ax-b.component';
 import { NavbarComponent } from './navbar/navbar.component'
 
 import { initFlowbite } from 'flowbite';
+import { TempComponent } from "./tem/temp/temp.component";
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet,
-            DistanciaComponent,
-            ZodiacoChinoComponent,
-            AxBComponent,
-            NavbarComponent
-          ],
+    DistanciaComponent,
+    ZodiacoChinoComponent,
+    AxBComponent,
+    NavbarComponent, TempComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
