@@ -11,11 +11,11 @@ export default [
     loadComponent:()=>import('./alumnos/alumnos.component').then(c=>c.AlumnosComponent)
   },
   {
-    path: 'Editar',
+    path: 'Editar/:matricula',
     loadComponent:()=>import('./editar/editar.component').then(c=>c.EditarComponent)
   },
     {
-    path: 'Eliminar',
+    path: 'Eliminar/:matricula',
     loadComponent:()=>import('./eliminar/eliminar.component').then(c=>c.EliminarComponent)
   },
 

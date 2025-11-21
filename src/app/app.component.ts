@@ -14,7 +14,7 @@ import { TempComponent } from "./tem/temp/temp.component";
     DistanciaComponent,
     ZodiacoChinoComponent,
     AxBComponent,
-    NavbarComponent, TempComponent],
+    NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
